@@ -6,6 +6,7 @@ const serverFn = createServerFn({ method: "POST" }).handler(async () => {
   return new Response(JSON.stringify({ hello: "world" }), {
     status: 200,
     headers: {
+      "Content-Type": "application/json",
       "Set-Cookie": "test=test",
     },
   });
